@@ -1,1 +1,34 @@
 
+import json
+
+from prompt_parser import parse_prompt
+from scene_generator import generate_scenes
+from image_prompt_generator import generate_image_prompts
+from caption_generator import generate_caption
+
+
+def main():
+
+    user_prompt = input("Enter Reel Idea: ")
+
+    parsed_data = parse_prompt(user_prompt)
+
+    scenes = generate_scenes(parsed_data)
+
+    image_prompts = generate_image_prompts(scenes)
+
+    caption = generate_caption(parsed_data)
+
+    final_output = {
+        "parsed_data": parsed_data,
+        "scenes": scenes,
+        "image_prompts": image_prompts,
+        "caption": caption
+    }
+
+    print("\n")
+    print(json.dumps(final_output, indent=4))
+
+
+if __name__ == "__main__":
+    main()
