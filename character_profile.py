@@ -22,13 +22,15 @@ def get_character_profile():
             "dreams of getting into a good engineering college"
         ],
         "room_details": [
-            "MPC textbooks",
-            "physics notes",
-            "chemistry formulas on wall",
-            "EAMCET materials",
-            "simple wooden study table",
-            "middle class Hyderabad home interior"
-        ],
+    "mathematics textbooks",
+    "physics notes",
+    "chemistry textbooks",
+    "EAMCET practice materials",
+    "formula sheets on wall",
+    "mock test papers",
+    "simple wooden study table",
+    "middle class Hyderabad home interior"
+],
         "social_style": [
             "natural expressions",
             "authentic student behavior",

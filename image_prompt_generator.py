@@ -1,9 +1,26 @@
 import random
 
+from character_profile import get_character_profile
+
 
 def generate_image_prompts(scenes):
 
     prompts = []
+    profile = get_character_profile()
+
+    appearance = profile["appearance"]
+    room_details = profile["room_details"]
+
+    base_character = (
+        f"{profile['name']}, "
+        f"{profile['age']} year old Hyderabad intermediate student girl, "
+        f"{appearance['skin_tone']}, "
+        f"{appearance['hair']}, "
+        f"{appearance['eyes']}, "
+        f"{appearance['style']}"
+    )
+
+    room_context = ", ".join(room_details[:4])
 
     camera_styles = [
         "android front camera selfie realism",
@@ -21,14 +38,6 @@ def generate_image_prompts(scenes):
         "natural window light"
     ]
 
-    aesthetic_styles = [
-        "natural skin texture",
-        "slightly messy realistic student room",
-        "authentic Hyderabad middle class home",
-        "realistic South Indian teenage appearance",
-        "casual home atmosphere"
-    ]
-
     emotion_styles = [
         "emotionally relatable expression",
         "natural facial emotions",
@@ -40,10 +49,10 @@ def generate_image_prompts(scenes):
     for scene in scenes:
 
         full_prompt = (
-            f"Ultra realistic Hyderabad intermediate student girl, "
+            f"Ultra realistic, {base_character}, "
+            f"{room_context}, "
             f"{random.choice(camera_styles)}, "
             f"{random.choice(lighting_styles)}, "
-            f"{random.choice(aesthetic_styles)}, "
             f"{random.choice(emotion_styles)}, "
             f"{scene['description']}"
         )
