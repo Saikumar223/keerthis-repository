@@ -1,4 +1,3 @@
-
 import json
 
 from prompt_parser import parse_prompt
@@ -7,11 +6,9 @@ from image_prompt_generator import generate_image_prompts
 from caption_generator import generate_caption
 
 
-def main():
+def generate_reel(prompt):
 
-    user_prompt = input("Enter Reel Idea: ")
-
-    parsed_data = parse_prompt(user_prompt)
+    parsed_data = parse_prompt(prompt)
 
     scenes = generate_scenes(parsed_data)
 
@@ -28,6 +25,23 @@ def main():
 
     print("\n")
     print(json.dumps(final_output, indent=4))
+    print("\n")
+
+
+def main():
+
+    print("=== Keerthi Story Engine ===")
+    print("Type 'exit' anytime to stop.\n")
+
+    while True:
+
+        user_prompt = input("Enter Reel Idea: ")
+
+        if user_prompt.lower() == "exit":
+            print("Exiting Keerthi Engine...")
+            break
+
+        generate_reel(user_prompt)
 
 
 if __name__ == "__main__":
