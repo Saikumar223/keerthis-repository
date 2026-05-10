@@ -6,31 +6,38 @@ def get_character_profile():
         "city": "Hyderabad",
         "language": "Telugu",
         "family_background": "Middle class family",
+
+        # Permanent reference portrait used to maintain consistency
+        "reference_image": "assets/reference/keerthi_master_portrait_v2.png",
+
         "appearance": {
             "skin_tone": "medium brown South Indian complexion",
             "hair": "long black slightly wavy hair",
             "eyes": "dark brown expressive eyes",
             "height": "around 5 feet 3 inches",
-            "style": "simple salwar kameez or casual home wear"
+            "style": "simple light blue salwar kameez or casual home wear"
         },
+
         "personality": [
             "hardworking",
             "relatable",
             "slightly emotional",
             "ambitious",
             "friendly",
-            "dreams of getting into a good engineering college"
+            "dreams of getting into a top engineering college"
         ],
+
         "room_details": [
-    "mathematics textbooks",
-    "physics notes",
-    "chemistry textbooks",
-    "EAMCET practice materials",
-    "formula sheets on wall",
-    "mock test papers",
-    "simple wooden study table",
-    "middle class Hyderabad home interior"
-],
+            "mathematics textbooks",
+            "physics notes",
+            "chemistry textbooks",
+            "EAMCET practice materials",
+            "formula sheets on wall",
+            "mock test papers",
+            "simple wooden study table",
+            "middle class Hyderabad home interior"
+        ],
+
         "social_style": [
             "natural expressions",
             "authentic student behavior",

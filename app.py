@@ -10,9 +10,12 @@ from production_plan_generator import generate_production_plan
 from asset_manifest_generator import generate_asset_manifest
 from checklist_generator import generate_checklist
 from output_manager import save_all_outputs
+from character_profile import get_character_profile
 
 
 def generate_reel(prompt):
+
+    profile = get_character_profile()
 
     parsed_data = parse_prompt(prompt)
     scenes = generate_scenes(parsed_data)
@@ -22,6 +25,10 @@ def generate_reel(prompt):
     shot_list = generate_shot_list(scenes)
 
     final_output = {
+        "character": {
+            "name": profile["name"],
+            "reference_image": profile["reference_image"]
+        },
         "input_prompt": prompt,
         "parsed_data": parsed_data,
         "scenes": scenes,
@@ -35,19 +42,20 @@ def generate_reel(prompt):
     final_output["asset_manifest"] = generate_asset_manifest(final_output)
     final_output["checklist"] = generate_checklist()
 
-    print("\\n")
+    print("\n")
     print(json.dumps(final_output, indent=4, ensure_ascii=False))
-    print("\\n")
+    print("\n")
 
     output_folder = save_all_outputs(final_output)
 
-    print(f"All outputs saved to: {output_folder}\\n")
+    print(f"All outputs saved to: {output_folder}\n")
 
 
 def main():
 
-    print("=== Keerthi Story Engine V7 ===")
-    print("Type 'exit' anytime to stop.\\n")
+    print("=== Keerthi Story Engine V8 ===")
+    print("Reference portrait loaded automatically.")
+    print("Type 'exit' anytime to stop.\n")
 
     while True:
 
@@ -58,7 +66,7 @@ def main():
             break
 
         if not user_prompt.strip():
-            print("Please enter a valid prompt.\\n")
+            print("Please enter a valid prompt.\n")
             continue
 
         generate_reel(user_prompt)

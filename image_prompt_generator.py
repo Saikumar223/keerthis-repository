@@ -10,17 +10,20 @@ def generate_image_prompts(scenes):
 
     appearance = profile["appearance"]
     room_details = profile["room_details"]
+    social_style = profile["social_style"]
 
+    # Core character description (used in every prompt)
     base_character = (
         f"{profile['name']}, "
-        f"{profile['age']} year old Hyderabad intermediate student girl, "
+        f"{profile['age']} year old Hyderabad intermediate second year MPC student, "
         f"{appearance['skin_tone']}, "
         f"{appearance['hair']}, "
         f"{appearance['eyes']}, "
         f"{appearance['style']}"
     )
 
-    room_context = ", ".join(room_details[:4])
+    # Use first few room details to keep prompts concise
+    room_context = ", ".join(room_details[:5])
 
     camera_styles = [
         "android front camera selfie realism",
@@ -31,7 +34,7 @@ def generate_image_prompts(scenes):
     ]
 
     lighting_styles = [
-        "soft natural lighting",
+        "soft natural daylight",
         "rainy evening lighting",
         "warm study lamp lighting",
         "realistic indoor middle class room lighting",
@@ -49,17 +52,20 @@ def generate_image_prompts(scenes):
     for scene in scenes:
 
         full_prompt = (
-            f"Ultra realistic, {base_character}, "
+            f"Ultra realistic portrait of {base_character}, "
             f"{room_context}, "
             f"{random.choice(camera_styles)}, "
             f"{random.choice(lighting_styles)}, "
             f"{random.choice(emotion_styles)}, "
+            f"{random.choice(social_style)}, "
+            f"Reference image: {profile['reference_image']}, "
             f"{scene['description']}"
         )
 
         prompts.append({
             "scene_number": scene["scene_number"],
-            "prompt": full_prompt
+            "prompt": full_prompt,
+            "reference_image": profile["reference_image"]
         })
 
     return prompts

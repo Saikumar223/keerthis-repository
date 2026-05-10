@@ -1,0 +1,69 @@
+{
+    "character": {
+        "name": "Keerthi",
+        "reference_image": "assets/reference/keerthi_master_portrait_v2.png"
+    },
+    "input_prompt": "Keerthi taking a break during EAMCET preparation while rain outside",
+    "parsed_data": {
+        "character": "Keerthi",
+        "theme": "EAMCET preparation",
+        "mood": "stress relief",
+        "location": "study room",
+        "weather": "rainy"
+    },
+    "scenes": [
+        {
+            "scene_number": 1,
+            "description": "Keerthi solving physics problems with frustrated expression"
+        },
+        {
+            "scene_number": 2,
+            "description": "Keerthi casually scrolling Instagram while studying"
+        },
+        {
+            "scene_number": 4,
+            "description": "Keerthi enjoying cool weather from balcony"
+        },
+        {
+            "scene_number": 5,
+            "description": "Keerthi motivating herself to continue studying"
+        },
+        {
+            "scene_number": 6,
+            "description": "Keerthi returning to study after short relaxation"
+        }
+    ],
+    "image_prompts": [
+        {
+            "scene_number": 1,
+            "prompt": "Ultra realistic portrait of Keerthi, 17 year old Hyderabad intermediate second year MPC student, medium brown South Indian complexion, long black slightly wavy hair, dark brown expressive eyes, simple light blue salwar kameez or casual home wear, mathematics textbooks, physics notes, chemistry textbooks, EAMCET practice materials, formula sheets on wall, realistic student vlog style, natural window light, natural facial emotions, casual Instagram reel vibe, Reference image: assets/reference/keerthi_master_portrait_v2.png, Keerthi solving physics problems with frustrated expression",
+            "reference_image": "assets/reference/keerthi_master_portrait_v2.png"
+        },
+        {
+            "scene_number": 2,
+            "prompt": "Ultra realistic portrait of Keerthi, 17 year old Hyderabad intermediate second year MPC student, medium brown South Indian complexion, long black slightly wavy hair, dark brown expressive eyes, simple light blue salwar kameez or casual home wear, mathematics textbooks, physics notes, chemistry textbooks, EAMCET practice materials, formula sheets on wall, realistic student vlog style, soft natural daylight, emotionally relatable expression, authentic student behavior, Reference image: assets/reference/keerthi_master_portrait_v2.png, Keerthi casually scrolling Instagram while studying",
+            "reference_image": "assets/reference/keerthi_master_portrait_v2.png"
+        },
+        {
+            "scene_number": 4,
+            "prompt": "Ultra realistic portrait of Keerthi, 17 year old Hyderabad intermediate second year MPC student, medium brown South Indian complexion, long black slightly wavy hair, dark brown expressive eyes, simple light blue salwar kameez or casual home wear, mathematics textbooks, physics notes, chemistry textbooks, EAMCET practice materials, formula sheets on wall, natural handheld mobile camera shot, rainy evening lighting, emotionally relatable expression, authentic student behavior, Reference image: assets/reference/keerthi_master_portrait_v2.png, Keerthi enjoying cool weather from balcony",
+            "reference_image": "assets/reference/keerthi_master_portrait_v2.png"
+        },
+        {
+            "scene_number": 5,
+            "prompt": "Ultra realistic portrait of Keerthi, 17 year old Hyderabad intermediate second year MPC student, medium brown South Indian complexion, long black slightly wavy hair, dark brown expressive eyes, simple light blue salwar kameez or casual home wear, mathematics textbooks, physics notes, chemistry textbooks, EAMCET practice materials, formula sheets on wall, realistic student vlog style, natural window light, natural facial emotions, natural expressions, Reference image: assets/reference/keerthi_master_portrait_v2.png, Keerthi motivating herself to continue studying",
+            "reference_image": "assets/reference/keerthi_master_portrait_v2.png"
+        },
+        {
+            "scene_number": 6,
+            "prompt": "Ultra realistic portrait of Keerthi, 17 year old Hyderabad intermediate second year MPC student, medium brown South Indian complexion, long black slightly wavy hair, dark brown expressive eyes, simple light blue salwar kameez or casual home wear, mathematics textbooks, physics notes, chemistry textbooks, EAMCET practice materials, formula sheets on wall, android front camera selfie realism, natural window light, natural facial emotions, casual Instagram reel vibe, Reference image: assets/reference/keerthi_master_portrait_v2.png, Keerthi returning to study after short relaxation",
+            "reference_image": "assets/reference/keerthi_master_portrait_v2.png"
+        }
+    ],
+    "caption": "5 mins break ani reel chestunna 😭 #EAMCET #StudentLife",
+    "video_script": "Intermediate second year life ante books, pressure, and small breaks in between.\nKeerthi solving physics problems with frustrated expression\nKeerthi casually scrolling Instagram while studying\nKeerthi enjoying cool weather from balcony\nKeerthi motivating herself to continue studying\nKeerthi returning to study after short relaxation\nNo matter how stressful life gets, we keep moving forward.",
+    "shot_list": "Scene 1: Close-up selfie shot - Keerthi solving physics problems with frustrated expression\nScene 2: Study table medium shot - Keerthi casually scrolling Instagram while studying\nScene 4: Rainy window cinematic shot - Keerthi enjoying cool weather from balcony\nScene 5: Over-the-shoulder study shot - Keerthi motivating herself to continue studying\nScene 6: Natural handheld mobile shot - Keerthi returning to study after short relaxation",
+    "production_plan": "# Keerthi Reel Production Plan\n\n## Caption\n5 mins break ani reel chestunna 😭 #EAMCET #StudentLife\n\n## Workflow\n1. Generate images using image_prompts.txt\n2. Use the reference portrait for face consistency\n3. Animate images using Kling AI or Runway ML\n4. Use video_script.txt as voiceover\n5. Follow shot_list.txt for camera style\n6. Assemble everything in CapCut\n\n## Deliverables\n- Instagram Reel (9:16)\n- Thumbnail\n- Caption and hashtags",
+    "asset_manifest": "{\n    \"character\": \"Keerthi\",\n    \"reference_image\": \"assets/reference/keerthi_master_portrait_v2.png\",\n    \"scene_count\": 5,\n    \"deliverables\": [\n        \"reel_output.json\",\n        \"caption.txt\",\n        \"image_prompts.txt\",\n        \"video_script.txt\",\n        \"shot_list.txt\",\n        \"production_plan.md\",\n        \"asset_manifest.json\",\n        \"checklist.md\"\n    ],\n    \"recommended_tools\": {\n        \"image_generation\": \"ChatGPT Images\",\n        \"video_animation\": \"Kling AI or Runway ML\",\n        \"editing\": \"CapCut\"\n    },\n    \"notes\": [\n        \"Use the reference_image to maintain Keerthi's face across all future scenes.\",\n        \"Generate one image per scene using image_prompts.txt.\",\n        \"Animate the images and combine them into a 9:16 Instagram reel.\"\n    ]\n}",
+    "checklist": "# Reel Production Checklist\n\n- [ ] Review caption.txt\n- [ ] Generate images using image_prompts.txt\n- [ ] Animate images using AI video tool\n- [ ] Record or generate voiceover using video_script.txt\n- [ ] Review shot_list.txt\n- [ ] Assemble in CapCut\n- [ ] Export 9:16 vertical video\n- [ ] Upload to Instagram"
+}
